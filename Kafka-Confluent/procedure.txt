@@ -1,0 +1,28 @@
+To run Kafka-Confluent paltform locally (supports Schema Evolution)
+1. Download confluent platform from below mentioned link
+https://www.confluent.io/download/
+
+2. You can download any foemat. I have dowenloaded zip.
+
+3. Unzip it and and run this script to install the confluent CLI --->  curl -L https://cnfl.io/cli | sh -s -- -b /<path-to-confluent-directory>/bin
+
+4. nstall the Kafka Connect Datagen source connector ---> <path-to-confluent>/bin/confluent-hub install \
+--no-prompt confluentinc/kafka-connect-datagen:latest
+
+5. save it environment vvariable ---> export PATH=<path-to-confluent>/bin:$PATH
+
+6. RUN to start confluenet platform---> confluent local start
+
+7. Go to ---> http://localhost:9021
+
+8. Import proj from Kafka github repo.
+
+9. Run mvn clean package
+
+10. Run Consumer1.java
+
+11. Run Producer1.java
+
+12. Open Consumer1.local terminal to view output
+
+13. Run to stop Conflunet Platform ---> confluent local stop
